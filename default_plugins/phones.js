@@ -40,7 +40,7 @@ function Phones(knwl) {
         var countryCodeRegExp = /^\d{1,3}$/;
     
         for (var i = 0; i < words.length; i++) {
-            currWord = knwl.tasks.removeCharacters(["-", "(", ")"], words[i]);
+            currWord = knwl.tasks.removeCharacters(["+", "-", "(", ")"], words[i]);
     
             if (phoneRegexp.test(currWord)) {
                 /* At this point the word is thought to be a phone number.
