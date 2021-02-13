@@ -115,7 +115,7 @@ function Knwl(language) {
 	this.init = function(str) {
 		var lowercase = String(str).toLowerCase();
 		var linkWords = lowercase.split(/[\<\>\"\:]+/);
-		var linkWordsCaseSensitive = String(str).split(/[ \n]+/);
+		var linkWordsCaseSensitive = String(str).split(/[\<\>\,]+/);
 		lowercase = lowercase.split(/[\n ]+/);
 		
 		for (var ii = 0; ii < lowercase.length; ii++)
