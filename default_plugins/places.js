@@ -827,7 +827,7 @@ function Places(knwl) {
                     isCountry = false;
                     break;
                   }
-                  if (country[zz].toLowerCase() !== words[i + zz].replace(/[()!,.]/g, '').toLowerCase()) {
+                  if (country[zz].toLowerCase() !== words[i + zz].replace(/[\s()!,.]/g, '').toLowerCase()) {
                     isCountry = false;
                     break;
                   }
