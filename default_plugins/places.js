@@ -816,7 +816,7 @@ function Places(knwl) {
           if (isMatch === false || isFalsePlace === true) {
             for (var ee = 0; ee < places.countryList.length; ee++) {
               var country = places.countryList[ee].name.split(' ');
-              if (country[0].toLowerCase() === words[i].replace(/[()!,.]/g, '').toLowerCase()) {
+              if (country[0].toLowerCase() === words[i].replace(/[ ()!,.]/g, '').toLowerCase()) {
                 var isCountry = true;
                 for (var zz = 0; zz < country.length; zz++) {
                   if (country[zz].length === 0) {
