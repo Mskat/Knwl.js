@@ -754,6 +754,7 @@ function Places(knwl) {
   this.calls = function() {
       var words = knwl.words.get('linkWordsCasesensitive');
       var triggers = places.triggers;
+      var chosenList = places.citiesListUK; //declare the list you want to use
       var results = [];
   
       for (var i = 0; i < words.length; i++) {
@@ -814,8 +815,8 @@ function Places(knwl) {
           }
           
           if (isMatch === false || isFalsePlace === true) {
-            for (var ee = 0; ee < places.countryList.length; ee++) {
-              var country = places.countryList[ee].name.split(' ');
+            for (var ee = 0; ee < chosenList.length; ee++) {
+                var country = chosenList[ee].name.split(' ');
               if (country[0].toLowerCase() === words[i].replace(/[ ()!,.]/g, '').toLowerCase()) {
                 var isCountry = true;
                 for (var zz = 0; zz < country.length; zz++) {
@@ -833,7 +834,7 @@ function Places(knwl) {
                 }
                 if (isCountry) {
                   var placeObj = {
-                      place: places.countryList[ee].name,
+                      place: chosenList[ee].name,
                       preview: knwl.tasks.preview(i),
                       found: i
                   };
