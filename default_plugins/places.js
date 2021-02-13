@@ -4,7 +4,251 @@ function Places(knwl) {
   this.languages = {
     'english': true,
   };
-  
+
+  this.citiesListUK = [
+        { "name": "Aberdeen", "code": "AB" }
+        ,
+        { "name": "St Albans", "code": "AL" }
+        ,
+        { "name": "Birmingham", "code": "B" }
+        ,
+        { "name": "Bath", "code": "BA" }
+        ,
+        { "name": "Blackburn", "code": "BB" }
+        ,
+        { "name": "Bradford", "code": "BD" }
+        ,
+        { "name": "Bournemouth", "code": "BH" }
+        ,
+        { "name": "Bolton", "code": "BL" }
+        ,
+        { "name": "Brighton", "code": "BN" }
+        ,
+        { "name": "Bromley", "code": "BR" }
+        ,
+        { "name": "Bristol", "code": "BS" }
+        ,
+        { "name": "Belfast", "code": "BT" }
+        ,
+        { "name": "Carlisle", "code": "CA" }
+        ,
+        { "name": "Cambridge", "code": "CB" }
+        ,
+        { "name": "Cardiff", "code": "CF" }
+        ,
+        { "name": "Chester", "code": "CH" }
+        ,
+        { "name": "Chelmsford", "code": "CM" }
+        ,
+        { "name": "Colchester", "code": "CO" }
+        ,
+        { "name": "Croydon", "code": "CR" }
+        ,
+        { "name": "Canterbury", "code": "CT" }
+        ,
+        { "name": "Coventry", "code": "CV" }
+        ,
+        { "name": "Crewe", "code": "CW" }
+        ,
+        { "name": "Dartford", "code": "DA" }
+        ,
+        { "name": "Dundee", "code": "DD" }
+        ,
+        { "name": "Derby", "code": "DE" }
+        ,
+        { "name": "Dumfries", "code": "DG" }
+        ,
+        { "name": "Durham", "code": "DH" }
+        ,
+        { "name": "Darlington", "code": "DL" }
+        ,
+        { "name": "Doncaster", "code": "DN" }
+        ,
+        { "name": "Dorchester", "code": "DT" }
+        ,
+        { "name": "Dudley", "code": "DY" }
+        ,
+        { "name": "East London", "code": "E" }
+        ,
+        { "name": "East Central London", "code": "EC" }
+        ,
+        { "name": "Edinburgh", "code": "EH" }
+        ,
+        { "name": "Enfield", "code": "EN" }
+        ,
+        { "name": "Exeter", "code": "EX" }
+        ,
+        { "name": "Falkirk", "code": "FK" }
+        ,
+        { "name": "Blackpool", "code": "FY" }
+        ,
+        { "name": "Glasgow", "code": "G" }
+        ,
+        { "name": "Gloucester", "code": "GL" }
+        ,
+        { "name": "Guildford", "code": "GU" }
+        ,
+        { "name": "Harrow", "code": "HA" }
+        ,
+        { "name": "Huddersfield", "code": "HD" }
+        ,
+        { "name": "Harrogate", "code": "HG" }
+        ,
+        { "name": "Hemel Hempstead", "code": "HP" }
+        ,
+        { "name": "Hereford", "code": "HR" }
+        ,
+        { "name": "Hebrides", "code": "HS" }
+        ,
+        { "name": "Hull", "code": "HU" }
+        ,
+        { "name": "Halifax", "code": "HX" }
+        ,
+        { "name": "Ilford", "code": "IG" }
+        ,
+        { "name": "Ipswich", "code": "IP" }
+        ,
+        { "name": "Inverness", "code": "IV" }
+        ,
+        { "name": "Kilmarnock", "code": "KA" }
+        ,
+        { "name": "Kingston upon Thames", "code": "KT" }
+        ,
+        { "name": "Kirkwall", "code": "KW" }
+        ,
+        { "name": "Kirkcaldy", "code": "KY" }
+        ,
+        { "name": "Liverpool", "code": "L" }
+        ,
+        { "name": "Lancaster", "code": "LA" }
+        ,
+        { "name": "Llandrindod Wells", "code": "LD" }
+        ,
+        { "name": "Leicester", "code": "LE" }
+        ,
+        { "name": "Llandudno", "code": "LL" }
+        ,
+        { "name": "Lincoln", "code": "LN" }
+        ,
+        { "name": "Leeds", "code": "LS" }
+        ,
+        { "name": "Luton", "code": "LU" }
+        ,
+        { "name": "Manchester", "code": "M" }
+        ,
+        { "name": "Medway", "code": "ME" }
+        ,
+        { "name": "Milton Keynes", "code": "MK" }
+        ,
+        { "name": "Motherwell", "code": "ML" }
+        ,
+        { "name": "North London", "code": "N" }
+        ,
+        { "name": "Newcastle upon Tyne", "code": "NE" }
+        ,
+        { "name": "Nottingham", "code": "NG" }
+        ,
+        { "name": "Northampton", "code": "NN" }
+        ,
+        { "name": "Newport", "code": "NP" }
+        ,
+        { "name": "Norwich", "code": "NR" }
+        ,
+        { "name": "North West London", "code": "NW" }
+        ,
+        { "name": "Oldham", "code": "OL" }
+        ,
+        { "name": "Oxford", "code": "OX" }
+        ,
+        { "name": "Paisley", "code": "PA" }
+        ,
+        { "name": "Peterborough", "code": "PE" }
+        ,
+        { "name": "Perth", "code": "PH" }
+        ,
+        { "name": "Plymouth", "code": "PL" }
+        ,
+        { "name": "Portsmouth", "code": "PO" }
+        ,
+        { "name": "Preston", "code": "PR" }
+        ,
+        { "name": "Reading", "code": "RG" }
+        ,
+        { "name": "Redhill", "code": "RH" }
+        ,
+        { "name": "Romford", "code": "RM" }
+        ,
+        { "name": "Sheffield", "code": "S" }
+        ,
+        { "name": "Swansea", "code": "SA" }
+        ,
+        { "name": "South East London", "code": "SE" }
+        ,
+        { "name": "Stevenage", "code": "SG" }
+        ,
+        { "name": "Stockport", "code": "SK" }
+        ,
+        { "name": "Slough", "code": "SL" }
+        ,
+        { "name": "Sutton", "code": "SM" }
+        ,
+        { "name": "Swindon", "code": "SN" }
+        ,
+        { "name": "Southampton", "code": "SO" }
+        ,
+        { "name": "Salisbury", "code": "SP" }
+        ,
+        { "name": "Sunderland", "code": "SR" }
+        ,
+        { "name": "Southend-on-Sea", "code": "SS" }
+        ,
+        { "name": "Stoke-on-Trent", "code": "ST" }
+        ,
+        { "name": "South West London", "code": "SW" }
+        ,
+        { "name": "Shrewsbury", "code": "SY" }
+        ,
+        { "name": "Taunton", "code": "TA" }
+        ,
+        { "name": "Tweeddale", "code": "TD" }
+        ,
+        { "name": "Telford", "code": "TF" }
+        ,
+        { "name": "Tunbridge Wells", "code": "TN" }
+        ,
+        { "name": "Torquay", "code": "TQ" }
+        ,
+        { "name": "Truro", "code": "TR" }
+        ,
+        { "name": "Teesside", "code": "TS" }
+        ,
+        { "name": "Twickenham", "code": "TW" }
+        ,
+        { "name": "Southall", "code": "UB" }
+        ,
+        { "name": "West London", "code": "W" }
+        ,
+        { "name": "Warrington", "code": "WA" }
+        ,
+        { "name": "West Central London", "code": "WC" }
+        ,
+        { "name": "Watford", "code": "WD" }
+        ,
+        { "name": "Wakefield", "code": "WF" }
+        ,
+        { "name": "Wigan", "code": "WN" }
+        ,
+        { "name": "Worcester", "code": "WR" }
+        ,
+        { "name": "Walsall", "code": "WS" }
+        ,
+        { "name": "Wolverhampton", "code": "WV" }
+        ,
+        { "name": "York", "code": "YO" }
+        ,
+        { "name": "Lerwick", "code": "ZE" }
+    ];
+
   this.countryList = [
     {"name":"Afghanistan","code":"AF"}
     ,
